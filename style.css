@@ -14,6 +14,52 @@ header {
 	justify-content: center;
 }
 
+.cover {
+	z-index: 100;
+	background-color: rgb(241, 241, 241);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+
+.loading {
+	z-index: 101;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	animation: loading-animation 1.5s infinite;
+}
+
+@keyframes loading-animation {
+	0% {
+		background-color: rgb(87, 224, 183);
+		top: calc(50vh - 50px);
+		left: calc(50vw - 50px);
+	}
+	25% {
+		background-color: rgb(42, 226, 88);
+		top: calc(50vh - 50px);
+		left: calc(50vw);
+	}
+	50% {
+		background-color: rgb(106, 219, 41);
+		top: calc(50vh);
+		left: calc(50vw);
+	}
+	75% {
+		background-color: rgb(156, 209, 32);
+		top: calc(50vh);
+		left: calc(50vw - 50px);
+	}
+
+	100% {
+		background-color: rgb(87, 224, 183);
+		top: calc(50vh - 50px);
+		left: calc(50vw - 50px);
+	}
+}
+
 .header-img {
 	object-fit: cover;
 	position: absolute;
