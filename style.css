@@ -97,7 +97,7 @@ header {
 	align-self: center;
 	box-shadow: 3px 3px 5px black;
 	opacity: 0;
-	animation-name: title-animation;
+	/* animation-name: title-animation; */
 	animation-duration: 1s;
 	animation-delay: 0.3s;
 	animation-fill-mode: forwards;
@@ -161,7 +161,6 @@ header {
 
 .fade {
 	opacity: 0;
-	animation-name: fade;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 }
