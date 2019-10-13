@@ -3,7 +3,11 @@ html {
 	font-size: 20px;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	/* overflow: hidden; */
+}
+
+a {
+	text-decoration: none;
 }
 
 header {
@@ -16,17 +20,19 @@ header {
 
 .cover {
 	z-index: 100;
-	background-color: rgb(241, 241, 241);
+	background-color: rgb(102, 102, 102);
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
 }
 
 .loading {
+	box-sizing: border-box;
 	z-index: 101;
+	border: 10px solid white;
 	position: absolute;
-	width: 50px;
-	height: 50px;
+	width: 100px;
+	height: 100px;
 	background-color: red;
 	animation: loading-animation 1.5s infinite;
 }
@@ -34,12 +40,12 @@ header {
 @keyframes loading-animation {
 	0% {
 		background-color: rgb(87, 224, 183);
-		top: calc(50vh - 50px);
-		left: calc(50vw - 50px);
+		top: calc(50vh - 100px);
+		left: calc(50vw - 100px);
 	}
 	25% {
 		background-color: rgb(42, 226, 88);
-		top: calc(50vh - 50px);
+		top: calc(50vh - 100px);
 		left: calc(50vw);
 	}
 	50% {
@@ -50,13 +56,13 @@ header {
 	75% {
 		background-color: rgb(156, 209, 32);
 		top: calc(50vh);
-		left: calc(50vw - 50px);
+		left: calc(50vw - 100px);
 	}
 
 	100% {
 		background-color: rgb(87, 224, 183);
-		top: calc(50vh - 50px);
-		left: calc(50vw - 50px);
+		top: calc(50vh - 100px);
+		left: calc(50vw - 100px);
 	}
 }
 
@@ -82,6 +88,7 @@ header {
 }
 
 .header-title {
+	display: block;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 320%;
 	font-weight: 500;
@@ -97,10 +104,14 @@ header {
 	align-self: center;
 	box-shadow: 3px 3px 5px black;
 	opacity: 0;
-	/* animation-name: title-animation; */
 	animation-duration: 1s;
 	animation-delay: 0.3s;
 	animation-fill-mode: forwards;
+	transition: border-color 0.25s ease;
+}
+
+.header-title:hover {
+	border-color: rgb(74, 182, 196);
 }
 
 @keyframes title-animation {
@@ -128,7 +139,7 @@ header {
 	background: linear-gradient(to bottom right, rgba(0, 204, 255, 0.25), rgba(9, 255, 0, 0.25));
 	border: none;
 	border-radius: 2px;
-	margin: 20px 0;
+	margin: 15px;
 	padding: 15px 30px;
 	cursor: pointer;
 	transition: box-shadow 0.2s ease, transform 0.3s ease;
@@ -157,6 +168,13 @@ header {
 
 .media-icon:hover {
 	transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.app-link {
+	display: block;
+	position: absolute;
+	top: 75%;
+	left: 20%;
 }
 
 .fade {
